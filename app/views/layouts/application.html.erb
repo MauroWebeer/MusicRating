@@ -13,6 +13,11 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <ul>
+      <li> <%= link_to "Musicas", musics_path %>  </li>
+      <li> <%= link_to "Generos", genres_path %>  </li>
+      <li> <%= link_to "Notas", ratings_path %>  </li>  
+    </ul>
     <%= yield %>
   </body>
 </html>
