@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :ratings
   resources :genres
   resources :musics
   devise_for :users
