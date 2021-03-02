@@ -5,7 +5,7 @@ ActiveAdmin.register Music do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :name, :artist, :album
+  permit_params :name, :artist, :album, :genre_id
   #
   # or
   #

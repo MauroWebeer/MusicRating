@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_23_225101) do
+ActiveRecord::Schema.define(version: 2021_03_02_221507) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -50,6 +50,8 @@ ActiveRecord::Schema.define(version: 2021_02_23_225101) do
     t.string "album"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "genre_id", null: false
+    t.index ["genre_id"], name: "index_musics_on_genre_id"
   end
 
   create_table "ratings", force: :cascade do |t|
@@ -75,6 +77,7 @@ ActiveRecord::Schema.define(version: 2021_02_23_225101) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "musics", "genres"
   add_foreign_key "ratings", "musics"
   add_foreign_key "ratings", "users"
 end

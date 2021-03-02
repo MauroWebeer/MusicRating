@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<% @user.ratings.each do |rating| %>
+    <p>
+        <%= rating.music.name %>
+        <br>
+        <%= rating.music.album %>
+        <br>
+        <%= rating.value %>
+    </p>
+<% end %>    
